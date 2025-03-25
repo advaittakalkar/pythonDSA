@@ -3,8 +3,8 @@
 # Expected approach - One iteration search     -- O(n)
 
 def secondHighest(numbers):
-    l = -1
-    sl = -1
+    l = -1    #float("-inf")
+    sl = -1   #float("-inf")
 
     for i in numbers:
         if i > l:

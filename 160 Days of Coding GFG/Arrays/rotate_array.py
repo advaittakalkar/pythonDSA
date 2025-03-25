@@ -9,7 +9,7 @@
 
 
 def rotate_array(numList, d):
-    print(numList[d:len(numList):1] + numList[0:d:1])  # [2,6,1] +  [0,1,1]    [a:b:c]  a inclusive, b exclusive, c steps
+    print(numList[d:len(numList):1] + numList[0:d:1])  # [2,6,1] + [0,1,1]    [a:b:c]  a inclusive, b exclusive, c steps
 
 
 if __name__ == "__main__":

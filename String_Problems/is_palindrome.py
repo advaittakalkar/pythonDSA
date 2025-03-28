@@ -1,4 +1,4 @@
-def isPalindrome(string):
+def isPalindrome(string):       # time complexity - O(n)
     string = string.lower()
     start = 0
     end = len(string) - 1

@@ -1,4 +1,4 @@
-def reverse_string(s):
+def reverse_string(s):  # time complexity - O(n)
     return s[::-1]
 
 

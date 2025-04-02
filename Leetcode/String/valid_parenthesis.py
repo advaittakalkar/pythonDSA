@@ -1,27 +1,21 @@
 def validParenthesis(s):
-    cnt1 = 0  # ()
-    cnt2 = 0  # []
-    cnt3 = 0  # {}
+    stack = []
+    bracket_map = {")": "(", "}": "{", "]": "["}
+    brackets = ['(', '[', '{' ]
     for char in s:
-        if char == "(":
-            cnt1 = cnt1 + 1
-        elif char == "[":
-            cnt2 = cnt2 + 1
-        elif char == "{":
-            cnt3 = cnt3 + 1
-        elif char == ")":
-            cnt1 = cnt1 - 1
-        elif char == "]":
-            cnt2 = cnt2 - 1
+        if char in brackets:    # if its opening bracket then append
+            stack.append(char)
+        elif stack and stack[-1] == bracket_map[char]:  # if some opening bracket present in stack and current close bracket's equivalent open bracket is on the top then pop
+            stack.pop()
         else:
-            cnt3 = cnt3 - 1
+            return False
 
-    if cnt1 == 0 and cnt2 == 0 and cnt3 == 0:
-        print("valid")
+    if not stack:
+        return True
     else:
-        print("not valid")
+        return False
 
 
 if __name__ == "__main__":
-    s = '{({[]})}'
-    validParenthesis(s)
+    s = '['
+    print(validParenthesis(s))

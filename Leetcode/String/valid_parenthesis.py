@@ -1,4 +1,4 @@
-def validParenthesis(s):
+def validParenthesis(s):  # O(n) and O(n)
     stack = []
     bracket_map = {")": "(", "}": "{", "]": "["}
     brackets = ['(', '[', '{' ]

@@ -1,4 +1,4 @@
-# def removeElement(nums,val):
+# def removeElement(nums,val):  # Here I used the dictionary to remove the number and its count and print other numbers according to their count
 #     hashmap = {}
 #     mylist = []
 #     for number in nums:
@@ -14,10 +14,11 @@
 #     print(mylist)
 def removeElement(nums,val):
     k = 0
-    for i in range(len(nums)):
-        if nums[i] != val:
-            nums[k] = nums[i]
+    for number in nums:
+        if number != val:
+            nums[k] = number
             k = k + 1
+    print(k)
     print(nums)          # taking all elements to prior
     for x in range(k, len(nums)):
         nums[x] = 0

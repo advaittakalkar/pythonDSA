@@ -5,8 +5,6 @@
 def indexFirstOccurance(haystack, needle):
     n = len(haystack)
     m = len(needle)
-    if not needle:
-        print("no needle")
     for i in range(0, n-m+1):
         if haystack[i:i+m] == needle:
             print(f"first occurances is at index {i}")
@@ -14,6 +12,6 @@ def indexFirstOccurance(haystack, needle):
 
 
 if __name__ == "__main__":
-    haystack = "butsad"
-    needle = "sad"
+    haystack = "hello"
+    needle = "ll"
     indexFirstOccurance(haystack, needle)

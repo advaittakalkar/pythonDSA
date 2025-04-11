@@ -11,6 +11,7 @@ def indexFirstOccurance(haystack, needle):
             break
 
 
+
 if __name__ == "__main__":
     haystack = "hello"
     needle = "ll"
